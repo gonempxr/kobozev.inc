@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kobozev Inc.</title>
+  <meta name="description" content="Kobozev Inc. — официальный сайт компании.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #14161a;
+      --muted: #5b6270;
+      --accent: #2f5bea;
+      --line: #e4e7ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --fg: #eef0f3;
+        --muted: #9aa3b2;
+        --accent: #7c9bff;
+        --line: #252a33;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+    header { border-bottom: 1px solid var(--line); }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: var(--fg); text-decoration: none; }
+    nav a { color: var(--muted); text-decoration: none; margin-left: 20px; }
+    nav a:hover, nav a:focus-visible { color: var(--fg); }
+    .hero { padding-top: 96px; padding-bottom: 72px; }
+    .logo, nav a { white-space: nowrap; }
+    nav { display: flex; }
+    @media (max-width: 480px) {
+      nav a { margin-left: 14px; font-size: 15px; }
+      .hero { padding-top: 64px; padding-bottom: 56px; }
+    }
+    h1 { font-size: clamp(36px, 7vw, 60px); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 20px; }
+    .lead { font-size: 20px; color: var(--muted); max-width: 600px; margin: 0 0 32px; }
+    .btn {
+      display: inline-block; padding: 12px 22px; border-radius: 8px;
+      background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+    }
+    .btn:focus-visible { outline: 3px solid var(--fg); outline-offset: 2px; }
+    section { padding: 56px 0; border-top: 1px solid var(--line); }
+    h2 { font-size: 28px; letter-spacing: -0.02em; margin: 0 0 16px; }
+    p { margin: 0 0 12px; }
+    .muted { color: var(--muted); }
+    footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="./">Kobozev Inc.</a>
+      <nav aria-label="Основная навигация">
+        <a href="#about">О компании</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <h1>Kobozev Inc.</h1>
+      <!-- TODO: замените на слоган компании -->
+      <p class="lead">Официальный сайт компании Kobozev Inc.</p>
+      <a class="btn" href="#contact">Связаться с нами</a>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <h2>О компании</h2>
+        <!-- TODO: впишите описание компании и услуг -->
+        <p class="muted">Описание компании скоро появится здесь.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2>Контакты</h2>
+        <!-- TODO: укажите реальный email и ссылки -->
+        <p class="muted">Контактные данные скоро появятся здесь.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="y">2026</span> Kobozev Inc.</div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
